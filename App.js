@@ -5,9 +5,9 @@ const port=5000||process.env.PORT
 const cors=require('cors')
 const path =require('path')
 
-
-require('./DB/db')
 app.use(cors())
+require('./DB/db')
+
 
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
