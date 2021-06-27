@@ -1,13 +1,14 @@
 require('dotenv').config()
+require('./DB/db')
 const express=require('express')
 const app=express()
 const port=5000||process.env.PORT
 const cors=require('cors')
 const path =require('path')
-
-
-require('./DB/db')
 app.use(cors())
+
+
+
 
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
