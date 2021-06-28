@@ -28,8 +28,8 @@ function blogRoutes() {
         async createBlog(req, res) {
             try {
               
-                console.log(req.body,req.file)
-                const { author, heading, body, desc } = req.body
+               // console.log(req.body,req.file)
+                const { author, heading, body, desc,image } = req.body
 
                 const newBlog = new Blog({
                     author,
@@ -37,7 +37,7 @@ function blogRoutes() {
                     body,
                     description:desc,
                     uuid: uuidv4(),
-                    image:req.file.originalname
+                    image
                 })
                 const saved = await newBlog.save()
                 if (saved) return res.status(200).json({ msg: "saved" })
