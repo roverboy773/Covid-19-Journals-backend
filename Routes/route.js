@@ -1,5 +1,5 @@
 
-const blogRoutes=require('./blogRoutes/index')
+const blogRoutes=require('./blogRoutes/index.js')
 // const multer=require('multer')
 // // const upload=require('../middleWare/upload/upload')
 // var storage = multer.diskStorage({

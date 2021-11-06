@@ -14,9 +14,9 @@ app.use(express.urlencoded({extended:false}))
 // app.use(express.static(path.join(__dirname,'/upload')))
 
 require('./Routes/route')(app)
-app.use((req,res)=>{
-    res.status(404).send('Page not Found')
-})
+// app.use((req,res)=>{
+//     res.status(404).send('Page not Found')
+// })
 
 
 app.listen(port,()=>console.log(`listening to port ${port}`))
