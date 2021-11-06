@@ -14,10 +14,7 @@ const blogRoutes=require('./blogRoutes/index.js')
 
 function routes(app){
   
-    app.get('https://covid-19-journals.herokuapp.com/allJournals',blogRoutes().getAllBlogs)
-    app.get('https://covid-19-journals.herokuapp.com/show-Blog/:uuid',blogRoutes().getIndiBlog)
-    app.post('https://covid-19-journals.herokuapp.com/create-blog',blogRoutes().createBlog)
-    app.post('https://covid-19-journals.herokuapp.com/update-views/:uuid',blogRoutes().updateViews)
+
 }
 
 module.exports=routes
