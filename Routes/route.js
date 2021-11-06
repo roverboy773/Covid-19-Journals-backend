@@ -14,7 +14,7 @@ const blogRoutes=require('./blogRoutes/index')
 
 function routes(app){
   
-    app.get('/Journals',blogRoutes().getAllBlogs)
+    app.get('/allJournals',blogRoutes().getAllBlogs)
     app.get('/show-Blog/:uuid',blogRoutes().getIndiBlog)
     app.post('/create-blog',blogRoutes().createBlog)
     app.post('/update-views/:uuid',blogRoutes().updateViews)

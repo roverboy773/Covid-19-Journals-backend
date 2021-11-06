@@ -5,6 +5,7 @@ const { v4: uuidv4 } = require('uuid');
 function blogRoutes() {
     return {
         async getAllBlogs(req, res) {
+            console.log('getallblogs')
             const blogs = await Blog.find();
             console.log(blogs);
             if (blogs.length > 0)
