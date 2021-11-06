@@ -6,6 +6,7 @@ function blogRoutes() {
     return {
         async getAllBlogs(req, res) {
             const blogs = await Blog.find();
+            console.log(blogs);
             if (blogs.length > 0)
                 return res.status(200).json({ data: blogs })
             else return res.status(200).json({ data: 'Be the first to write Blog on own Platform' })

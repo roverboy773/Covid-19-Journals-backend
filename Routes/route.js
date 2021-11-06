@@ -1,5 +1,5 @@
 
-// const blogRoutes=require('./blogRoutes/index')
+const blogRoutes=require('./blogRoutes/index')
 // const multer=require('multer')
 // // const upload=require('../middleWare/upload/upload')
 // var storage = multer.diskStorage({
@@ -14,7 +14,7 @@
 
 function routes(app){
   
-    app.get('/allJournals',blogRoutes().getAllBlogs)
+    app.get('/Journals',blogRoutes().getAllBlogs)
     app.get('/show-Blog/:uuid',blogRoutes().getIndiBlog)
     app.post('/create-blog',blogRoutes().createBlog)
     app.post('/update-views/:uuid',blogRoutes().updateViews)
