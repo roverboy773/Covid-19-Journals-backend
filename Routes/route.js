@@ -14,10 +14,10 @@
 
 function routes(app){
   
-    app.get('/allJournals',blogRoutes().getAllBlogs)
-    app.get('/show-Blog/:uuid',blogRoutes().getIndiBlog)
-    app.post('/create-blog',blogRoutes().createBlog)
-    app.post('/update-views/:uuid',blogRoutes().updateViews)
+    app.get('https://covid-19-journals.herokuapp.com/allJournals',blogRoutes().getAllBlogs)
+    app.get('https://covid-19-journals.herokuapp.com/show-Blog/:uuid',blogRoutes().getIndiBlog)
+    app.post('https://covid-19-journals.herokuapp.com/create-blog',blogRoutes().createBlog)
+    app.post('https://covid-19-journals.herokuapp.com/update-views/:uuid',blogRoutes().updateViews)
 }
 
 module.exports=routes
