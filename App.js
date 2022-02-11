@@ -6,7 +6,12 @@ const port=process.env.PORT || 5001
 const cors=require('cors')
 const blogRoutes=require('./Routes/blogRoutes/index.js')
 // const path =require('path')
-app.use(cors())
+const corsOptions ={
+    origin:['http://localhost:3000','https://adoring-mclean-dee50e.netlify.app','http://127.0.0.1:3000'], 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
+}
+app.use(cors(corsOptions));
 
 
 
